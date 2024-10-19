@@ -3,155 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خدمة التعليق الصوتي - عبدالله الدرويش</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>عبدالله علي محمد الدرويش - مصمم ومعلق صوتي</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        @import url('https://fonts.cdnfonts.com/css/bukra');
+
         body {
-            font-family: 'Cairo', sans-serif;
-            background-color: #1a1a1a;
-            color: #fff;
+            font-family: 'Bukra', 'Cairo', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
-        .container {
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 20px;
-            background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-        h1 {
-            font-family: 'Cairo', sans-serif;
-            color: #f1c40f;
+
+        header {
+            background-color: #1e1e1e;
+            color: #f2c94c;
+            padding: 40px 20px;
             text-align: center;
-            margin-bottom: 20px;
-            font-size: 2.2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #f1c40f;
-            font-weight: bold;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 6px;
-            background-color: #333;
-            color: #fff;
-            font-size: 16px;
-        }
-        button {
-            background-color: #f1c40f;
-            color: #1a1a1a;
-            padding: 15px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
-            width: 100%;
-        }
-        button:hover {
-            background-color: #d4ac0d;
-        }
-        .note {
-            font-size: 14px;
-            color: #bbb;
-            margin-top: -10px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #777;
-            padding-bottom: 20px;
-        }
-        .payment-info {
-            background-color: #333;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            text-align: right;
-            line-height: 1.5;
-        }
-        .payment-info p {
-            margin: 5px 0;
-            color: #ddd;
-        }
-        .logo {
+
+        nav {
             display: flex;
             justify-content: center;
-            margin-bottom: 20px;
+            background-color: #333;
         }
-        .logo img {
-            width: 120px;
-            height: auto;
-            border-radius: 8px;
+
+        nav a {
+            color: #f2c94c;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #f2c94c;
+            margin-bottom: 15px;
+            font-size: 28px;
+            border-bottom: 2px solid #f2c94c;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            color: #f2c94c;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-btn {
+            background-color: #f2c94c;
+            color: #1e1e1e;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .contact-btn:hover {
+            background-color: #e0b94a;
+        }
+
+        .thank-you {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .voice-sample {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .voice-sample a {
+            background-color: #f2c94c;
+            color: #1e1e1e;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        .voice-sample a:hover {
+            background-color: #e0b94a;
+        }
+
+        .spacer {
+            height: 100px; /* مساحة إضافية لتجنب تغطية المحتوى بالفوتر */
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-item {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .feature-item h3 {
+            color: #f2c94c;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .feature-item p {
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        .feature-item:hover {
+            background-color: #444;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="path/to/your/logo.png" alt="شعار عبدالله الدرويش">
-        </div>
-        <h1>خدمة التعليق الصوتي - عبدالله الدرويش</h1>
-        <div class="payment-info">
-            <p>لتحويل الأموال، يرجى استخدام المعلومات التالية:</p>
-            <p>رقم الحساب (بالريال اليمني): <strong>3101549126</strong></p>
-            <p>رقم الحساب (بالريال السعودي): <strong>3101432695</strong></p>
-            <p>اسم المستلم: <strong>عبدالله علي محمد أحمد الدرويش</strong></p>
-            <p>يرجى التأكد من مطابقة الاسم ورقم الهاتف مع معلومات التحويل الخاصة بك.</p>
-        </div>
-        <form action="https://wa.me/967734799935" method="get" target="_blank">
-            <label for="name">الاسم الكامل:</label>
-            <input type="text" id="name" name="name" required placeholder="أدخل اسمك الرباعي">
-            
-            <label for="phone">رقم الهاتف (يجب أن يحتوي على واتساب):</label>
-            <input type="text" id="phone" name="phone" required placeholder="أدخل رقم الهاتف مع رمز الدولة">
-            
-            <label for="text">النص المطلوب:</label>
-            <textarea id="text" name="text" rows="4" required placeholder="أدخل النص الذي تريد تحويله إلى صوت"></textarea>
-            
-            <label for="duration">طريقة الحساب:</label>
-            <select id="duration" name="duration" required>
-                <option value="" disabled selected>اختر طريقة الحساب</option>
-                <option value="time">لكل 10 ثوان - 2700 ريال يمني / 20 ريال سعودي</option>
-                <option value="words">لكل 10 كلمات - 1700 ريال يمني / 12 ريال سعودي</option>
-            </select>
+    <header>
+        <h1>عبدالله علي محمد الدرويش</h1>
+        <p>مصمم جرافيكي ومعلق صوتي محترف، جاهز لتحويل أفكارك إلى واقع</p>
+    </header>
 
-            <label for="voice-style">نوع الصوت:</label>
-            <select id="voice-style" name="voice-style" required>
-                <option value="" disabled selected>اختر نوع الصوت</option>
-                <option value="formal">عربي فصيح</option>
-                <option value="yemeni">يمني</option>
-                <option value="saudi">سعودي</option>
-                <option value="egyptian">مصري</option>
-                <option value="english">إنجليزي</option>
-            </select>
+    <nav>
+        <a href="#design">صمم لي</a>
+        <a href="#voice">علق لي</a>
+        <a href="#features">ماذا يقدم لك درويش؟</a>
+        <a href="#contact">اتصل بي</a>
+    </nav>
 
-            <label for="voice-tone">فئة الصوت:</label>
-            <select id="voice-tone" name="voice-tone" required>
-                <option value="" disabled selected>اختر فئة الصوت</option>
-                <option value="soft">ناعم</option>
-                <option value="serious">جاد</option>
-                <option value="happy">مرح</option>
-                <option value="scary">مرعب</option>
-                <option value="broadcast">إذاعي</option>
-            </select>
+    <section id="design">
+        <h2>صمم لي</h2>
+        <p>أهلاً بك في قسم التصميم الخاص بي! أنا هنا لأحول أفكارك إلى تصاميم إبداعية تعكس شخصيتك واحتياجاتك. سواء كنت تبحث عن تصميم شعار فريد، أو حتى تصاميم وسائل التواصل الاجتماعي، يمكنني تقديم ما يلبي ذوقك ويتفوق على توقعاتك.</p>
+        <p>بإمكانك رؤية نماذج من تصاميمي من خلال تواصلك المشرف معي.</p>
+    </section>
 
-            <button type="submit">إرسال الطلب</button>
-        </form>
-        <div class="footer">
-            <p>شكراً لزيارتك!</p>
+    <section id="voice">
+        <h2>علق لي</h2>
+        <p>بصوتي، أستطيع أن أضيف الحياة إلى قصصك وإعلاناتك ومشاريعك. إذا كنت بحاجة لتعليق صوتي يوصل الرسالة بوضوح وحماس، فأنت في المكان المناسب.</p>
+        <div class="voice-sample">
+            <a href="https://youtu.be/8yOOttt0ayw?feature=shared">استمع إلى نموذج صوتي</a>
         </div>
-    </div>
+    </section>
+
+    <section id="features">
+        <h2>ماذا يقدم لك درويش؟</h2>
+        <div class="features">
+            <div class="feature-item">
+                <h3>تصاميم احترافية</h3>
+                <p>أعمل على تصاميم جرافيك مميزة وذات جودة عالية، مما يعزز هوية مشروعك ويجعله يبرز في السوق.</p>
+            </div>
+            <div class="feature-item">
+                <h3>تعليق صوتي احترافي</h3>
+                <p>صوت قوي ومعبر يلائم مختلف أنواع المشاريع، من الإعلانات إلى الوثائقيات والقصص.</p>
+            </div>
+            <div class="feature-item">
+                <h3>تواصل سهل ومباشر</h3>
+                <p>يمكنك التواصل معي بسرعة عبر الواتساب للحصول على استشارات سريعة أو لتبادل الأفكار مباشرة.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>اتصل بي</h2>
+        <p>للتواصل معي مباشرة عبر الواتساب، اضغط على الزر أدناه:</p>
+        <a class="contact-btn" href="https://wa.me/967734799935" target="_blank">تواصل معي عبر الواتساب</a>
+        <div class="thank-you">
+            <p>شكراً لزيارتك! أتطلع للتعاون معك قريباً.</p>
+        </div>
+    </section>
+
+    <div class="spacer"></div> <!-- مساحة إضافية أسفل الصفحة -->
+
+    <footer>
+        <p>&copy; 2024 عبدالله علي محمد الدرويش. جميع الحقوق محفوظة.</p>
+    </footer>
 </body>
 </html>
